@@ -3,4 +3,4 @@
 #    print('{}'.format(chr(char)), end='')
 #   another way to do with out using string format
 for char in range(97, 123):
-    print('{}'.format(chr(char)), end='')
+    print(f'{chr(char)}', end='')
