@@ -3,7 +3,7 @@ def fizzbuzz():
     a = "FizzBuzz"
     b = a[:4]
     c = a[4:]
-    for i in range(1, 100):
+    for i in range(1, 101):
         if i % 15 == 0:
             print("{} ".format(a), end='')
         elif i % 3 == 0:
