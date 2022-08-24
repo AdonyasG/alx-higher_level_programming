@@ -26,7 +26,7 @@ break;
 new = new->next;
 }
 
-if i(*head == new)
+if (*head == new)
 	{
 	  temp->next = new;
 	  *head = temp;
