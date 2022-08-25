@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-import sys
+from sys import argv
 if (len(sys.argv)-1 == 0):
     print(f"0 arguments.")
 else:
