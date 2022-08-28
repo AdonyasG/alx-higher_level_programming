@@ -1,3 +1,4 @@
+#!/usr/bin/python
 def no_c(my_string):
     if 'c' or 'C' in my_string:
         i = ""
