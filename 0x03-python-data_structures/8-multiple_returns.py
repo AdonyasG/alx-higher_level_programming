@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 def multiple_returns(sentence):
     for i in range(len(sentence)):
         for x in sentence[0]:
