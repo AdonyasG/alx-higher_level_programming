@@ -1,5 +1,6 @@
 #include "lists.h"
 #include <stdio.h>
+
 /**
 *is_palindorome - palindrome checker
 *@head: head of list
