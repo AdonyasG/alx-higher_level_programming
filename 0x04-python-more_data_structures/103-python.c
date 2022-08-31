@@ -1,4 +1,5 @@
 #include <Python.h>
+
 void print_python_bytes(PyObject *p)
 {
 	Py_ssize_t size;
