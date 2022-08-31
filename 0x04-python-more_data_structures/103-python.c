@@ -15,7 +15,7 @@ void print_python_bytes(PyObject *p)
 		printf("\n");
 	}
 	else
-		printf("  [ERROR] Invalid Bytes Object\n")
+		printf("  [ERROR] Invalid Bytes Object\n");
 }
 void print_python_list(PyObject *p)
 {
