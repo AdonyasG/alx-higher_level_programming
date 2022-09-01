@@ -3,4 +3,4 @@ def weight_average(my_list=[]):
     if my_list is not None:
         return sum(i*j for i, j in my_list)/sum(j for i, j in my_list)
     else:
-        return 0
+        return (0)
