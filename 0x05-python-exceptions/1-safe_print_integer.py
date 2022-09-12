@@ -6,5 +6,9 @@ def safe_print_integer(value):
             print("{:d}".format(value))
             return True
         except ValueError:
-            return False
-        return value
+            try:
+                float(value)
+                print("{:d}".format(value))
+                return True
+            except ValueError:
+                return False
