@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """
-Module 5-square
-Defines class Square
+Module 6-square
+Defines class Square with private size and position
+prints "#" to stdout
 """
 
 
@@ -14,16 +15,23 @@ class Square:
 
     Functions:
         __init__(self, size)
+                size(self)
+        size(self, value)
+        position(self)
+        position(self, value)
         area(self)
+        my_print(self)
     """
-    def __init__(self, size=0):
+    def __init__(self, size=0, position=(0, 0)):
         """
         Initializes square
 
         Attributes:
             size: size of a side of square
+            position : tuple of two positive integers
         """
         self.size = size
+        self.position = position
 
     @property
     def size(self):
@@ -60,6 +68,7 @@ class Square:
     def position(self, val):
         """
         Setter
+
         Args:
             value: sets position to tuple if value is tuple of 2 positive ints
         """
