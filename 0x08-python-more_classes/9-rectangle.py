@@ -1,12 +1,11 @@
 #!/usr/bin/python3
 """
-Module 8-rectangle
+Module 9-rectangle
 Defines class rectangle
 str representation
 public attribute that keeps track of number of insatnces
-public attribute for symbol string representation
+public attribute for symbol sting representation
 static method
-class method
 """
 
 
@@ -131,3 +130,8 @@ class Rectangle:
         if rect_1.area() >= rect_2.area():
             return rect_1
         return rect_2
+
+    @classmethod
+    """returns new rectanngle where width == height == size"""
+    def square(cls, size=0):
+        return cls(size, size)
