@@ -5,10 +5,9 @@ Control dynamically created instance attributes
 """
 
 
-class LockedClass:
+class LockedClass():
     """
     prevent user from creating new instance attribute dynamically
     unless attribute is "first_name
     """
-
-    __slots__ = "first name"
+    __slots__ = "first_name"
