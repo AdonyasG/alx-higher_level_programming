@@ -4,6 +4,7 @@ Module 9-student
 Contains class Student
 """
 
+
 class Student():
     def __init__(self, first_name, last_name, age):
         """
@@ -13,7 +14,8 @@ class Student():
         self.last_name = last_name
         self.age = age
 
-    def to_json(self):        """
+    def to_json(self):
+        """
         Returns dictionary description with simple data structure
         """
         self.__dict
