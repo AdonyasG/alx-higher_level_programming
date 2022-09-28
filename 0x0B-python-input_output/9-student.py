@@ -18,4 +18,4 @@ class Student():
         """
         Returns dictionary description with simple data structure
         """
-        self.__dict
+        self.__dict__
