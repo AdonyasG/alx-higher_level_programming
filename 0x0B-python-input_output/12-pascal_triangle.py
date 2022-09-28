@@ -1,17 +1,17 @@
 #!/usr/bin/python3
 """
-Module - 12-pascal triangle
+Module 12-Pascal Triangle
 """
 
 
 def pascal_triangle(n):
-    """ Returns list in pascal triangle"""
+    """Returns list in pascal triangle"""
     listt = []
     for i in range(n):
         listt.append([])
         for j in range(i + 1):
-            if j == 0 or j == 1:
+            if j == 0 or j == i:
                 listt[i].append(1)
             else:
                 listt[i].append(listt[i - 1][j - 1] + listt[i - 1][j])
-        return listt
+    return listt
