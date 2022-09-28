@@ -6,6 +6,14 @@ Contains class Student
 
 
 class Student():
+    """
+    Public Attributes:
+        first_name
+        last_name
+        age
+    Public Methods:
+        to_json
+    """
     def __init__(self, first_name, last_name, age):
         """
         Initializes student
