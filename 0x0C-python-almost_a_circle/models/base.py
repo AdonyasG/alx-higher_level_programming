@@ -5,6 +5,7 @@ Module - Base
 
 
 import json
+import csv
 import os
 
 
@@ -72,13 +73,32 @@ class Base():
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
-        """save csv file"""
-        if (list_objs is None):
-            with open("{}.csv".format(cls.__name__), "w") as f:
-                writer = csv.writer(f)
-        else:
-            new = []
-            with open("{}.csv".format(cls.__name__), "w") as f:
-                for obj in list_objs:
-                    new.append(obj.to_dictionary())
-                f.write(Base.to_json_string(new))
+        """ serializes and deserializes in CSV """
+        filename = cls.__name__ + ".csv"
+        with open(filename, 'w', newline='') as csvfile:
+            wr = csv.writer(csvfile)
+            for i in list_objs:
+                if cls.__name__ == "Rectangle":
+                    wr.writerow([i.id, i.width, i.height, i.x, i.y])
+                if cls.__name__ == "Square":
+                    wr.writerow([i.id, i.size, i.x, i.y])
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """ load csv file """
+        obj = []
+        filename = cls.__name__ + ".csv"
+        if os.path.isfile(filename):
+            with open(filename, 'r', newline='') as f:
+                c_read = csv.reader(f)
+                for row in c_read:
+                    if cls.__name__ == "Rectangle":
+                        names = {"id": int(row[0]), "width": int(row[1]),
+                                 "height": int(row[2]), "x": int(row[3]),
+                                 "y": int(row[4])}
+                    if cls.__name__ == "Square":
+                        names = {"id": int(row[0]), "size": int(row[1]),
+                                 "x": int(row[2]), "y": int(row[3])}
+                    link = cls.create(**names)
+                    obj.append(link)
+        return obj
