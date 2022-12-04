@@ -18,7 +18,7 @@ if __name__ == "__main__":
     session = Session()
 
     state = session.query(State)
-    state = state.filter(State.name == 'a').all()
+    state = state.filter(State.name.like("%a%")).all()
     for i in state:
         session.delete(i)
         session.commit()
