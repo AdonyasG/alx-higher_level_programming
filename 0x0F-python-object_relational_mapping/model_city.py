@@ -10,7 +10,7 @@ from sqlalchemy import Table, Column, Integer, Numeric, String, ForeignKey
 Base = declarative_base()
 
 
-class State(Base):
+class City(Base):
     """ class state"""
     __tablename__ = 'states'
     id = Column(Integer, primary_key=True, nullable=False)
