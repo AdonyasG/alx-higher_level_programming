@@ -22,4 +22,3 @@ if __name__ == "__main__":
     for i in state:
         session.delete(i)
         session.commit()
-    session.close()
