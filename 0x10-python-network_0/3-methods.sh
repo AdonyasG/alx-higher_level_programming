@@ -1,3 +1,3 @@
 #!/bin/bash
-# sends delete request
-curl -si DELETE "$1"
+# HTTP methods the server will accept.
+curl -si OPTION "$1"
